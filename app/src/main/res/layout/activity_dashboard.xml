@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Your Personalized Dashboard!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp" />
+
+        <!-- Combined Image and Text sections in a single LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/laptop" />
+
+                <TextView
+                    android:id="@+id/txtView1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Explore the latest in tech gadgets."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/mac" />
+
+                <TextView
+                    android:id="@+id/txtView2"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Discover premium devices for productivity."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/purse" />
+
+                <TextView
+                    android:id="@+id/txtView3"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Stylish purses for every occasion."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Row 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/watch" />
+
+                <TextView
+                    android:id="@+id/txtView4"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Luxury watches that define elegance."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Row 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/dream" />
+
+                <TextView
+                    android:id="@+id/txtView5"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Make your dream lifestyle a reality."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Remaining TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/txtView6"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Exclusive deals just for you."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/txtView7"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Shop the latest collections."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/txtView8"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Discover products tailored to you."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/txtView9"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Top picks recommended for you."
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtView10"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="Thank you for being part of our journey."
+                android:textSize="18sp"
+                android:textColor="#000" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
