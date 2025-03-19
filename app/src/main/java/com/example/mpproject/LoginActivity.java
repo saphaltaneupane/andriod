@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             } else if (password.isEmpty()) {
                 Toast.makeText(LoginActivity.this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(LoginActivity.this, MaindashboardActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ListviewActivity.class);
                 intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
@@ -82,25 +82,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.search) {
-            startActivity(new Intent(this, SearchActivity.class));
-            return true;
-        } else if (id == R.id.cart) {
-            startActivity(new Intent(this, CartActivity.class));
-            return true;
-        } else if (id == R.id.Setting) {
-            startActivity(new Intent(this, SettingsActivity.class));
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
 }
