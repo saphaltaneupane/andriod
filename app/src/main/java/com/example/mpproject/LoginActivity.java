@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             } else if (password.isEmpty()) {
                 Toast.makeText(LoginActivity.this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(LoginActivity.this, ListviewActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ProductGridActivity.class);
                 intent.putExtra("email", email);
                 startActivity(intent);
                 finish();

@@ -1,5 +1,7 @@
 package com.example.mpproject;
+
 import android.os.Bundle;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,35 +13,38 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
-public class ListviewActivity extends AppCompatActivity {
+public class ProductGridActivity extends AppCompatActivity {
+
     private Toolbar toolbar;
-    private ListView ListView;
-    private ProductListAdapter adapter;
+    private GridView gridView;
+    private ProductGridAdapter adapter;
     private ArrayList<Product> productlist = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_list_view);
+        setContentView(R.layout.activity_product_grid);
         initToolbar();
         findView();
     }
 
-    private void findView(){
-        ListView=findViewById(R.id.listview);
+    private void findView() {
+        gridView = findViewById(R.id.gridview);
         setProductData();
-        adapter = new ProductListAdapter(productlist, ListviewActivity.this);
-        ListView.setAdapter(adapter);
+        adapter = new ProductGridAdapter(productlist, ProductGridActivity.this);
+        gridView.setAdapter(adapter);
     }
+
     private void initToolbar() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Product List Page");
+        getSupportActionBar().setTitle("Product Grid Page");
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    private void setProductData(){
+
+    private void setProductData() {
         Product p1 = new Product();
         Product p2 = new Product();
         Product p3 = new Product();
