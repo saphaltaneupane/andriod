@@ -8,15 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mpproject.movie.MovieResults;
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductVH>{
-    private ArrayList<Product> productList= new ArrayList<>();
+    private ArrayList<MovieResults> movieResultsList= new ArrayList<>();
     private Context mContext;
-    public ProductAdapter(List<Product> dataList, Context context){
-        productList.clear();
-        productList.addAll(dataList);
+    public ProductAdapter(List<MovieResults> dataList, Context context){
+        movieResultsList.clear();
+        movieResultsList.addAll(dataList);
         mContext= context;
     }
     @NonNull
@@ -28,14 +31,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductVH>{
 
     @Override
     public void onBindViewHolder(@NonNull ProductVH holder, int position) {
-        holder.txtProductName.setText(productList.get(position).getName());
-     holder.txtProductDes.setText(productList.get(position).getDescription());
-        holder.txtProductPrice.setText(String.valueOf(productList.get(position).getName()));
-        holder.imgProduct.setImageDrawable(mContext.getDrawable(productList.get(position).getImage()));
+        holder.txtProductName.setText(movieResultsList.get(position).getTitle());
+     holder.txtProductDes.setText(movieResultsList.get(position).getOverview());
+        holder.txtProductPrice.setText(String.valueOf(movieResultsList.get(position).getReleaseDate()));
+        Picasso.get().load("https://image.tmdb.org/t/p/w500/"+movieResultsList.get(position).getPosterPath()).into(holder.imgProduct);
+
     }
 
     @Override
     public int getItemCount() {
-        return productList.size();
+        return movieResultsList.size();
     }
 }

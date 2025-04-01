@@ -8,57 +8,57 @@ import java.util.List;
 public class MovieResults {
     @SerializedName("adult")
     @Expose
-    private boolean adult;
+     boolean adult;
 
     @SerializedName("backdrop_path")
     @Expose
-    private  String backdropPath;
+      String backdropPath;
 
     @SerializedName("genere_ids")
     @Expose
-    private List<Integer> genereId;
+     List<Integer> genereId;
 
     @SerializedName("id")
     @Expose
-    private int id;
+     int id;
     @SerializedName("original_language")
     @Expose
-    private String originallanguage;
+     String originallanguage;
 
     @SerializedName("original_title")
     @Expose
-    private String originalTitle;
+     String originalTitle;
 
     @SerializedName("overview")
     @Expose
-    private String overview;
+     String overview;
 
     @SerializedName("popularity")
     @Expose
-    private double popularity;
+     double popularity;
 
     @SerializedName("poster_path")
     @Expose
-    private String posterPath;
+     String posterPath;
     @SerializedName("release_date")
     @Expose
-    private String releaseDate;
+     String releaseDate;
 
     @SerializedName("title")
     @Expose
-    private String title;
+     String title;
 
     @SerializedName("video")
     @Expose
-    private boolean video;
+     boolean video;
 
     @SerializedName("vote_average")
     @Expose
-    private double voteAverage;
+     double voteAverage;
 
     @SerializedName("vote_count")
     @Expose
-    private int voteCount;
+     int voteCount;
 
     public boolean isAdult() {
         return adult;
