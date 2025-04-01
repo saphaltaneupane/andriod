@@ -128,7 +128,7 @@ public class DBHandler extends SQLiteOpenHelper {
         // database after adding database.
         db.close();
     }
-
+//database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // this method is called to check if the table exists already.
