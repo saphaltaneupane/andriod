@@ -100,7 +100,11 @@ public class DBHandler extends SQLiteOpenHelper {
         cursor.close();
         return resultsData;
     }
-
+public void deleteMovieData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM "+TABLE_NAME);
+        db.close();
+}
     // this method is use to add new course to our sqlite database.
     public void addMovieData(String name, String description, String releaseDate,String posterPath ) {
 

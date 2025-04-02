@@ -144,6 +144,7 @@ public class ProductRecycleViewActivity extends AppCompatActivity {
                         String jsonObject = response.body().string();
                         Gson gsonObject = new Gson();
                         movieData = gsonObject.fromJson(jsonObject, MovieContainer.class);
+                        dbHandler.deleteMovieData();
                         for(int i=0;i<movieData.getResultList().size();i++){
                             dbHandler.addMovieData(movieData.getResultList().get(i).getOriginalTitle(),movieData.getResultList().get(i).getOverview(),movieData.getResultList().get(i).getReleaseDate(),movieData.getResultList().get(i).getPosterPath());
                         }
